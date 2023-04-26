@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   AppBar,
-  Avatar,
   Box,
   Button,
   Container,
@@ -10,7 +9,6 @@ import {
   Menu,
   MenuItem,
   Toolbar,
-  Tooltip,
   Typography,
 } from '@mui/material';
 
@@ -20,7 +18,7 @@ const pages = ["Categories", "Meals", "Drinks"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [_anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
