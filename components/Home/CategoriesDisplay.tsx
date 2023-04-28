@@ -1,9 +1,8 @@
 import { Box, Grid, Typography } from '@mui/material';
-import CategoryCard from './CategoryCard';
-import ICategory from '../types/ICategory';
+import CategoryCard from '../CategoryCard';
+import ICategory from '../../types/ICategory';
 
 function CategoriesDisplay({ categories } : IProps) {
-	console.log(Array.isArray(categories), typeof categories)
   return (
     <Box>
       <Grid my={4} display='flex' justifyContent='center' alignItems='center'>
