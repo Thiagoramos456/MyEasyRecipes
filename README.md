@@ -41,6 +41,8 @@ Check out the [live demo](https://my-easy-recipes.vercel.app/) of the applicatio
 
 ## Start using Docker 🐳
 
+If you want, you can run the project using Docker. If you have not installed Docker, [click here](https://www.docker.com/).
+
 1. Enter the repository and open the terminal
 2. Run the command  `docker build -t 'myeasyrecipes' .`
 3. Afterwards, run the command `docker run -d -p 3000:3000 --name "myeasyrecipes-container" myeasyrecipes`
