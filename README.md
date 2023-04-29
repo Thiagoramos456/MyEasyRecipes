@@ -26,14 +26,25 @@ Check out the [live demo](https://my-easy-recipes.vercel.app/) of the applicatio
 - [@types/node](https://www.npmjs.com/package/@types/node) v18.16.0
 - [@types/react](https://www.npmjs.com/package/@types/react) v18.0.38
 
+# How to run the website
+
 ## Installation 💻
 
 1. Clone the project repository
 2. Install the dependencies using the command `npm install`
 
-## How to run the application 🚀
+## Start the application 🚀
 
-1. Run the command `npm run dev`
-2. Access the application at `http://localhost:3000`
+1. Open the terminal and run the command `npm build`
+2. Then, run the command `npm start`
+3. Access the application at `http://localhost:3000`
 
+## Start using Docker 🐳
+
+If you want, you can run the project using Docker. If you have not installed Docker, [click here](https://www.docker.com/).
+
+1. Enter the repository and open the terminal
+2. Run the command  `docker build -t 'myeasyrecipes' .`
+3. Afterwards, run the command `docker run -d -p 3000:3000 --name "myeasyrecipes-container" myeasyrecipes`
+4. Access the application at `http://localhost:3000`
 
