@@ -12,7 +12,7 @@ function CategoryPage({ meals, category }: IProps) {
   return (
     <>
       <Grid my={4} display='flex' justifyContent='center' alignItems='center'>
-        <Typography variant='h5'>{category.strCategory}</Typography>
+        <Typography variant='h5'>{category.strCategory ?? ""}</Typography>
       </Grid>
       <Box my={3} display={'flex'} justifyContent='center'>
         <Box
@@ -23,8 +23,8 @@ function CategoryPage({ meals, category }: IProps) {
             maxHeight: { xs: 233, md: 167 },
             maxWidth: { xs: 350, md: 250 },
           }}
-          alt={category.strCategory}
-          src={category.strCategoryThumb}
+          alt={category.strCategory ?? ""}
+          src={category.strCategoryThumb ?? ""}
         />
       </Box>
       <Typography>{category.strCategoryDescription}</Typography>

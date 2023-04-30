@@ -47,7 +47,6 @@ function Navbar() {
             <Typography
               variant='h6'
               noWrap
-              component='a'
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -116,17 +115,30 @@ function Navbar() {
             MyEasyRecipes
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Link href={`/${page.toLowerCase()}`}>
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page}
-                </Button>
-              </Link>
-            ))}
+            <Link href={`/categories`}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Categories
+              </Button>
+            </Link>
+            <Link href={`/meals`}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Meals
+              </Button>
+            </Link>
+            <Link href={`/drinks`}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Categories
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
       </Container>
