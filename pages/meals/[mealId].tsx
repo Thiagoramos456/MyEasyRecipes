@@ -10,13 +10,14 @@ function MealPage({ meal }: IProps) {
         <Typography variant='h5'>{meal.strMeal}</Typography>
       </Grid>
       <Box my={3} display={'flex'} justifyContent='center'>
-        <Box
+        <CardMedia
           component='img'
           sx={{
             height: 233,
             width: 350,
             maxHeight: { xs: 233, md: 167 },
             maxWidth: { xs: 350, md: 250 },
+            borderRadius: '6px',
           }}
           alt={meal.strMeal}
           src={meal.strMealThumb}
