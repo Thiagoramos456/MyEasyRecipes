@@ -9,7 +9,7 @@ function MealsDisplay({ meals } : IProps) {
         <Typography variant='h5'>{ "Meals" }</Typography>
       </Grid>
 			<Box display='flex' gap={2} flexWrap='wrap' justifyContent='center' alignItems='center'>
-			{ meals?.map((meal) => <MealCard meal={meal} /> ) }
+			{ meals?.map((meal) => <MealCard key={meal.idMeal} meal={meal} /> ) }
 			</Box>
     </Box>
   );

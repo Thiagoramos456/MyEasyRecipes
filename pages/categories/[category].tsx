@@ -3,10 +3,10 @@ import {
   getAllCategories,
   getMealsByCategory,
 } from '../../services/MealApiService';
-import IMeal from '../../types/IMeal';
 import MealsDisplay from '../../components/Home/MealsDisplay';
 import ICategory from '../../types/ICategory';
 import { Box, Grid, Paper, Typography } from '@mui/material';
+import { IMeal } from '../../types/IMeal';
 
 function CategoryPage({ meals, category }: IProps) {
   return (
