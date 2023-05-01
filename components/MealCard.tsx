@@ -75,7 +75,6 @@ function MealCard({ meal }: IProps) {
 
 interface IProps {
   meal: IMeal;
-  isLoading: boolean;
 }
 
 export default MealCard;
