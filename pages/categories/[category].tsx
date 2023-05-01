@@ -5,7 +5,7 @@ import {
 } from '../../services/MealApiService';
 import MealsDisplay from '../../components/Home/MealsDisplay';
 import ICategory from '../../types/ICategory';
-import { Box, Grid, Paper, Typography } from '@mui/material';
+import { Box, CardMedia, Grid, Paper, Typography } from '@mui/material';
 import { IMeal } from '../../types/IMeal';
 
 function CategoryPage({ meals, category }: IProps) {
@@ -15,7 +15,7 @@ function CategoryPage({ meals, category }: IProps) {
         <Typography variant='h5'>{category.strCategory ?? ""}</Typography>
       </Grid>
       <Box my={3} display={'flex'} justifyContent='center'>
-        <Box
+        <CardMedia
           component='img'
           sx={{
             height: 233,
