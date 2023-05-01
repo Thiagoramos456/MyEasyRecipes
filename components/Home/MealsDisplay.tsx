@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import MealCard from '../MealCard';
-import IMeal from '../../types/IMeal';
+import { IMeal } from '../../types/IMeal';
 
 function MealsDisplay({ meals } : IProps) {
   return (
