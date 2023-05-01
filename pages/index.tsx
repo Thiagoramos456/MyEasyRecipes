@@ -6,8 +6,8 @@ import {
   getAllCategories,
   getMealsByCategory,
 } from '../services/MealApiService';
-import IMeal from '../types/IMeal';
 import MealsDisplay from '../components/Home/MealsDisplay';
+import { IMeal } from '../types/IMeal';
 
 function Home({ categories, randomMeals }: IProps) {
   return (
