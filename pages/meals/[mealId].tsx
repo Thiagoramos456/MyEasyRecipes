@@ -1,5 +1,4 @@
 import { Grid, Typography, Box, CardMedia } from '@mui/material';
-import MealsDisplay from '../../components/Home/MealsDisplay';
 import { IMealDetails } from '../../types/IMeal';
 import { getMealById } from '../../services/MealApiService';
 

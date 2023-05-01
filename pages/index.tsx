@@ -1,6 +1,4 @@
-import { Container } from '@mui/material';
 import CategoriesDisplay from '../components/Home/CategoriesDisplay';
-import Navbar from '../components/Navbar';
 import ICategory from '../types/ICategory';
 import {
   getAllCategories,
