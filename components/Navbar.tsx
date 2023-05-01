@@ -131,14 +131,6 @@ function Navbar() {
                 Meals
               </Button>
             </Link>
-            <Link href={`/drinks`}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Categories
-              </Button>
-            </Link>
           </Box>
         </Toolbar>
       </Container>
