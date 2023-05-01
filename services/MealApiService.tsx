@@ -16,6 +16,5 @@ export async function getMealsByCategory(category: string): Promise<IMeal[]> {
 export async function getMealById(mealId: string): Promise<IMealDetails> {
 	const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
   const data = await res.json();
-	console.log(data)
 	return data.meals[0] as IMealDetails;
 }
