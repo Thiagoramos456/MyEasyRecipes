@@ -2,7 +2,7 @@ import { Grid, Typography, Box, CardMedia } from '@mui/material';
 import { IMealDetails } from '../../types/IMeal';
 import { getMealById } from '../../services/MealApiService';
 
-function MealPage({ meal }: IProps) {
+function MealDetailsPage({ meal }: IProps) {
   return (
     <>
       <Grid my={4} display='flex' justifyContent='center' alignItems='center'>
@@ -16,7 +16,7 @@ function MealPage({ meal }: IProps) {
             width: 350,
             maxHeight: { xs: 233, md: 167 },
             maxWidth: { xs: 350, md: 250 },
-            borderRadius: '6px',
+            borderRadius: '10px',
           }}
           alt={meal.strMeal}
           src={meal.strMealThumb}
@@ -56,4 +56,4 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default MealPage;
+export default MealDetailsPage;
