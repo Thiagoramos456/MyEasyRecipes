@@ -1,29 +1,19 @@
 import { Button, FormGroup, Grid, TextField } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { FormEvent, FormEventHandler, useEffect, useState } from 'react';
 import MealsDisplay from '../../components/Home/MealsDisplay';
 import useSWR from 'swr';
 import { getMealsByName } from '../../services/MealApiService';
 
-const fetcher = async (
-  input: RequestInfo,
-  init: RequestInit,
-  ...args: any[]
-) => {
-  const res = await fetch(input, init);
-  return res.json();
-};
-
-
 function MealsSearchPage() {
   const [meals, setMeals] = useState([]);
-	const [mealSearchName, setMealSearchName] = useState("");
+  const [mealSearchName, setMealSearchName] = useState('');
 
-  const handleSearch = async () => {
-		const data = await getMealsByName(mealSearchName);
-		console.log(data);
+  const handleSearch = async (e: FormEvent) => {
+    e.preventDefault();
+    console.log(e)
+    const data = await getMealsByName(mealSearchName);
     setMeals(data);
   };
-
 
   return (
     <>
@@ -34,15 +24,19 @@ function MealsSearchPage() {
         justifyContent='center'
         alignItems='center'
       >
-				<FormGroup sx={{my: 6}}>
-					<TextField
-						sx={{ width: '50vw'}}
-						label='Search a meal...'
-						variant='outlined'
-						onChange={(e) => setMealSearchName(e.target.value)}
-					/>
-					<Button onClick={ handleSearch } variant="contained">Search</Button>
-				</FormGroup>
+        <form onSubmit={(e) => handleSearch(e)}>
+          <FormGroup sx={{ my: 6 }}>
+            <TextField
+              sx={{ width: '50vw' }}
+              label='Search a meal...'
+              variant='outlined'
+              onChange={(e) => setMealSearchName(e.target.value)}
+            />
+            <Button variant='contained'>
+              Search
+            </Button>
+          </FormGroup>
+        </form>
       </Grid>
       <MealsDisplay meals={meals} />
     </>
