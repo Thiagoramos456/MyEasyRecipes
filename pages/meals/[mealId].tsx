@@ -23,6 +23,7 @@ function MealDetailsPage({ meal }: IProps) {
         />
       </Box>
       <Box>
+        <Typography variant='h6'>{`Category: ${meal.strCategory}`}</Typography>
         <Typography mt={3} mb={2} variant='h6'>How to prepare</Typography>
 
         <Typography>{meal.strInstructions}</Typography>
