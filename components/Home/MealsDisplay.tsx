@@ -6,7 +6,7 @@ function MealsDisplay({ meals } : IProps) {
   return (
     <Box>
       <Grid my={4} display='flex' justifyContent='center' alignItems='center'>
-        <Typography variant='h5'>{ "Meals" }</Typography>
+        <Typography variant='h5'>{ meals.length > 0 ? "Meals" : "" }</Typography>
       </Grid>
 			<Box display='flex' gap={2} flexWrap='wrap' justifyContent='center' alignItems='center'>
 			{ meals?.map((meal) => <MealCard key={meal.idMeal} meal={meal} /> ) }
