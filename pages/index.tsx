@@ -6,10 +6,14 @@ import {
 } from '../services/MealApiService';
 import MealsDisplay from '../components/Home/MealsDisplay';
 import { IMeal } from '../types/IMeal';
+import Head from 'next/head';
 
 function Home({ categories, randomMeals }: IProps) {
   return (
     <>
+      <Head>
+        <title>Home</title>
+      </Head>
       <CategoriesDisplay categories={categories} />
       <MealsDisplay meals={randomMeals} />
     </>
