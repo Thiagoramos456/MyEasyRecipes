@@ -132,6 +132,24 @@ function Navbar() {
               </Button>
             </Link>
           </Box>
+          <Box display="flex">
+            <Link href={`/auth/signin`}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Login
+              </Button>
+            </Link>
+            <Link href={`/auth/signup`}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Sign-up
+              </Button>
+            </Link>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
