@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { IMeal } from '../types/IMeal';
 import { orange } from '@mui/material/colors';
 import { useState } from 'react';
+import React from 'react';
 
 function MealCard({ meal }: IProps) {
   const [isLoading, setIsLoading] = useState(false);

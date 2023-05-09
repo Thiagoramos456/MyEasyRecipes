@@ -7,7 +7,7 @@ services:
     build:
       dockerfile: Dockerfile
     volumes:
-      - ./:/usr/src/app
+      - ./front-end:/usr/src/app
       - /usr/src/app/node_modules
       - /usr/src/app/.next
     env_file:

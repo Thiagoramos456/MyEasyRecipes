@@ -7,6 +7,7 @@ import {
 import MealsDisplay from '../components/Home/MealsDisplay';
 import { IMeal } from '../types/IMeal';
 import Head from 'next/head';
+import React from 'react';
 
 function Home({ categories, randomMeals }: IProps) {
   return (
