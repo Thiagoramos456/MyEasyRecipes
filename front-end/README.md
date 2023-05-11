@@ -7,8 +7,7 @@ A recipe website made in NextJs
 
 Check out the [live demo](https://my-easy-recipes.vercel.app/) of the application.
 
-
-## Dependencies 📋
+## Dependencies (Front End) 📋
 
 - [Node.js](https://nodejs.org/en/) (lts/hydrogen)
 - [React](https://reactjs.org/) v18.2.0
